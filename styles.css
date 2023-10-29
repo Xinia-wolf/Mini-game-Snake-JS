@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px) minmax(50px, 50px);
+    grid-template-rows: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+}
+
+.cell {
+    border: 1px solid white;
+    background-color: #7CFC00;
+}
+
+.upperborder {
+    border: 1px solid white;
+    background-color: #7CFC00;
+}
+
+.snakehead {
+    background-color: #AF2FB8;
+    border: none;
+}
+
+.snaketail {
+    background-color: #E502F5;
+    border: none;
+}
+
+.snaketail:last-child {
+    background-color: #E502F5;
+    border: none;
+}
+
+.apple {
+    background-color: #FF4100;
+    border-radius: 50%;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    text-align: center;
+}
+
+.currentResult {
+    width: 100px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: #708090;
+}
+
+.bestResult {
+    width: 100px;
+    height: 30px;
+    border: 1px solid white;
+    background-color: #708090;
+}
+
+.restart {
+    width: 100px;
+    height: 50px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    
+    margin: 10px 10px;
+    padding: 10px 15px;
+    border-radius: 1px;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: white;
+    background: #FF7140;
+    transition: 0.3s;
+    display: none;
+}
+
+.restart:hover {
+    box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+    transform: scale(1.05);
+}

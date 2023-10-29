@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-игра Змейка на JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="results">
+        <span class="result__text">Current result</span>
+        <div class="currentResult"></div>
+        <span class="result__text">Best result</span>
+        <div class="bestResult"></div>
+    </div>
+    <div class="field">
+        <div class="cell" id="1" data-x="0" data-y="0"></div>
+        <div class="cell" id="2" data-x="50" data-y="0"></div>
+        <div class="cell" id="3" data-x="100" data-y="0"></div>
+        <div class="cell" id="4" data-x="150" data-y="0"></div>
+        <div class="cell" id="5" data-x="200" data-y="0"></div>
+        <div class="cell" id="6" data-x="250" data-y="0"></div>
+        <div class="cell" id="7" data-x="300" data-y="0"></div>
+        <div class="cell" id="8" data-x="350" data-y="0"></div>
+        <div class="cell" id="9" data-x="400" data-y="0"></div>
+        <div class="cell" id="10" data-x="450" data-y="0"></div>
+        <div class="cell" id="11" data-x="450" data-y="50"></div>
+        <div class="cell" id="12" data-x="400" data-y="50"></div>
+        <div class="cell" id="13" data-x="350" data-y="50"></div>
+        <div class="cell" id="14" data-x="300" data-y="50"></div>
+        <div class="cell" id="15" data-x="250" data-y="50"></div>
+        <div class="cell" id="16" data-x="200" data-y="50"></div>
+        <div class="cell" id="17" data-x="150" data-y="50"></div>
+        <div class="cell" id="18" data-x="100" data-y="50"></div>
+        <div class="cell" id="19" data-x="50" data-y="50"></div>
+        <div class="cell" id="20" data-x="0" data-y="50"></div>
+        <div class="cell" id="21" data-x="0" data-y="100"></div>
+        <div class="cell" id="22" data-x="50" data-y="100"></div>
+        <div class="cell" id="23" data-x="100" data-y="100"></div>
+        <div class="cell" id="24" data-x="150" data-y="100"></div>
+        <div class="cell" id="25" data-x="200" data-y="100"></div>
+        <div class="cell" id="26" data-x="250" data-y="100"></div>
+        <div class="cell" id="27" data-x="300" data-y="100"></div>
+        <div class="cell" id="28" data-x="350" data-y="100"></div>
+        <div class="cell" id="29" data-x="400" data-y="100"></div>
+        <div class="cell" id="30" data-x="450" data-y="100"></div>
+        <div class="cell" id="31" data-x="450" data-y="150"></div>
+        <div class="cell" id="32" data-x="400" data-y="150"></div>
+        <div class="cell" id="33" data-x="350" data-y="150"></div>
+        <div class="cell" id="34" data-x="300" data-y="150"></div>
+        <div class="cell" id="35" data-x="250" data-y="150"></div>
+        <div class="cell" id="36" data-x="200" data-y="150"></div>
+        <div class="cell" id="37" data-x="150" data-y="150"></div>
+        <div class="cell" id="38" data-x="100" data-y="150"></div>
+        <div class="cell" id="39" data-x="50" data-y="150"></div>
+        <div class="cell" id="40" data-x="0" data-y="150"></div>
+        <div class="cell" id="41" data-x="0" data-y="200"></div>
+        <div class="cell" id="42" data-x="50" data-y="200"></div>
+        <div class="cell" id="43" data-x="100" data-y="200"></div>
+        <div class="cell" id="44" data-x="150" data-y="200"></div>
+        <div class="cell" id="45" data-x="200" data-y="200"></div>
+        <div class="cell" id="46" data-x="250" data-y="200"></div>
+        <div class="cell" id="47" data-x="300" data-y="200"></div>
+        <div class="cell" id="48" data-x="350" data-y="200"></div>
+        <div class="cell" id="49" data-x="400" data-y="200"></div>
+        <div class="cell" id="50" data-x="450" data-y="200"></div>
+        <div class="cell" id="51" data-x="450" data-y="250"></div>
+        <div class="cell" id="52" data-x="400" data-y="250"></div>
+        <div class="cell" id="53" data-x="350" data-y="250"></div>
+        <div class="cell" id="54" data-x="300" data-y="250"></div>
+        <div class="cell" id="55" data-x="250" data-y="250"></div>
+        <div class="cell" id="56" data-x="200" data-y="250"></div>
+        <div class="cell" id="57" data-x="150" data-y="250"></div>
+        <div class="cell" id="58" data-x="100" data-y="250"></div>
+        <div class="cell" id="59" data-x="50" data-y="250"></div>
+        <div class="cell" id="60" data-x="0" data-y="250"></div>
+        <div class="cell" id="61" data-x="0" data-y="300"></div>
+        <div class="cell" id="62" data-x="50" data-y="300"></div>
+        <div class="cell" id="63" data-x="100" data-y="300"></div>
+        <div class="cell" id="64" data-x="150" data-y="300"></div>
+        <div class="cell" id="65" data-x="200" data-y="300"></div>
+        <div class="cell" id="66" data-x="250" data-y="300"></div>
+        <div class="cell" id="67" data-x="300" data-y="300"></div>
+        <div class="cell" id="68" data-x="350" data-y="300"></div>
+        <div class="cell" id="69" data-x="400" data-y="300"></div>
+        <div class="cell" id="70" data-x="450" data-y="300"></div>
+        <div class="cell" id="71" data-x="450" data-y="350"></div>
+        <div class="cell" id="72" data-x="400" data-y="350"></div>
+        <div class="cell" id="73" data-x="350" data-y="350"></div>
+        <div class="cell" id="74" data-x="300" data-y="350"></div>
+        <div class="cell" id="75" data-x="250" data-y="350"></div>
+        <div class="cell" id="76" data-x="200" data-y="350"></div>
+        <div class="cell" id="77" data-x="150" data-y="350"></div>
+        <div class="cell" id="78" data-x="100" data-y="350"></div>
+        <div class="cell" id="79" data-x="50" data-y="350"></div>
+        <div class="cell" id="80" data-x="0" data-y="350"></div>
+        <div class="cell" id="81" data-x="0" data-y="400"></div>
+        <div class="cell" id="82" data-x="50" data-y="400"></div>
+        <div class="cell" id="83" data-x="100" data-y="400"></div>
+        <div class="cell" id="84" data-x="150" data-y="400"></div>
+        <div class="cell" id="85" data-x="200" data-y="400"></div>
+        <div class="cell" id="86" data-x="250" data-y="400"></div>
+        <div class="cell" id="87" data-x="300" data-y="400"></div>
+        <div class="cell" id="88" data-x="350" data-y="400"></div>
+        <div class="cell" id="89" data-x="400" data-y="400"></div>
+        <div class="cell" id="90" data-x="450" data-y="400"></div>
+        <div class="cell" id="91" data-x="450" data-y="450"></div>
+        <div class="cell" id="92" data-x="400" data-y="450"></div>
+        <div class="cell" id="93" data-x="350" data-y="450"></div>
+        <div class="cell" id="94" data-x="300" data-y="450"></div>
+        <div class="cell" id="95" data-x="250" data-y="450"></div>
+        <div class="cell" id="96" data-x="200" data-y="450"></div>
+        <div class="cell" id="97" data-x="150" data-y="450"></div>
+        <div class="cell" id="98" data-x="100" data-y="450"></div>
+        <div class="cell" id="99" data-x="50" data-y="450"></div>
+        <div class="cell" id="100" data-x="0" data-y="450"></div>
+    </div>
+    <button class="restart">Restart &#x21bb;</button>
+    <script src="index.js"></script>
+</body>
+</html>
